@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css" />
     <style>
         * {
             font-family: "Nanum Pen Script", cursive;
@@ -56,22 +58,58 @@
             font-weight: bold;
         }
 
-        .pictures>details>summary{
+        .pictures>details>summary {
             font-size: 30px;
             font-weight: bold;
         }
+
+        :root{
+            --side-bar-width : 110px;
+            --side-bar-height: 180px;
+        }
+
+        .side-bar {
+            position: fixed;
+            background-color: black;
+            width: var(--side-bar-width);
+            height: var(--side-bar-height);
+            margin-top: calc((100vh - var(--side-bar-height)) / 2);
+            margin-left : calc((100vw - var(--side-bar-width)));
+            padding-left: 5px;
+            border-radius: 15px;
+        }
+
+        .side-bar{
+            transform: translate(calc(var(--side-bar-width)*0.6),0);
+            transition: .5s;
+        }
+        .side-bar:hover{
+            transform: translate(-20px,0);
+        }
+
     </style>
 </head>
-
 <body>
+    <aside class="side-bar">
+        <nav>
+            <ul>
+                <li><a href="#information">Information</a></li>
+                <li><a href="#introduce">introduce</a></li>
+                <li><a href="#etc">etc</a></li>
+            </ul>
+        </nav>
+    </aside>
     <main class="container">
         <header>
+            <a name="information"></a>
             <h1>WHY 12?</h1>
             <div class="bgm">
-                <audio src="https://blog.kakaocdn.net/dn/GliDg/btsGGkJe1RY/75ztTRGb4o78OrAtMVy550/tfile.mp3" controls></audio>
+                <iframe src="https://drive.google.com/file/d/1krKJbFkqWcAgXwuVXFj2iI11kBqKoniI/preview" width="430"
+                    height="56" allow="autoplay" controlsList="nodownload"></iframe>
             </div>
         </header>
         <div class="introImage">
+            
             <img alt="Image"
                 src="https://github.com/kopite97/test/blob/main/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%82%AC%EC%9D%B4%EC%A6%88.jpg?raw=true" />
         </div>
@@ -79,6 +117,7 @@
             <div class="information">
                 <h1>이름</h1>
                 <p>노석준</p>
+
             </div>
             <div class="information">
                 <h1>생년월일</h1>
@@ -89,17 +128,20 @@
                 <p>열심히 하겠습니다</p>
             </div>
         </div>
+
         <hr>
         <div class="selfIntro">
+            <a name="introduce"></a>
             <h1>안녕하세요! 축구와 게임을 좋아하는 노석준이라고 합니다! </h1>
             <p>Unity 클라이언트 개발자로 근무하다 백엔드에 대한 관심이 생겨 직무 전환을 위해 해당 트랙에 참여하게 되었습니다.<br>
-            고향은 경상북도 구미이고, 광주에서 대학생활을 하다 현재는 대전에 거주하고 있습니다.<br><br>
-            좋아하는 축구팀은 리버풀 입니다. 2009년부터 응원해 왔으며, 거의 매 경기 챙겨보고 있습니다.<br>
-            다양한 장르의 게임을 좋아합니다. 그 중 로스트아크를 주로 하며, RPG말고도 FootballManager나 문명6같은 시뮬레이션 게임을 주로 합니다.
-            예전에는 FPS게임도 굉장히 좋아했습니다.<br>
+                고향은 경상북도 구미이고, 광주에서 대학생활을 하다 현재는 대전에 거주하고 있습니다.<br><br>
+                좋아하는 축구팀은 리버풀 입니다. 2009년부터 응원해 왔으며, 거의 매 경기 챙겨보고 있습니다.<br>
+                다양한 장르의 게임을 좋아합니다. 그 중 로스트아크를 주로 하며, RPG말고도 FootballManager나 문명6같은 시뮬레이션 게임을 주로 합니다.
+                예전에는 FPS게임도 굉장히 좋아했습니다.<br>
             </p>
         </div>
         <hr>
+
         <div class="grid" id="gridPart">
             <div>
                 <article>
@@ -125,6 +167,7 @@
         </div>
         <hr>
         <h1>Pictures (▼클릭)</h1>
+        <a name="etc"></a>
         <div class="pictures">
             <details>
                 <summary>나를 미치게 하는 것들</summary>
@@ -161,12 +204,19 @@
                     <li>
                         LostArk
                         <p>내 캐릭터</p>
-                        <img src="https://github.com/kopite97/test/blob/main/%EB%82%B4%EC%BA%90%EB%A6%AD.jpg?raw=true" alt="본캐사진인데.." title="본캐">
-                        <img src="https://github.com/kopite97/test/blob/main/%EB%B6%80%EC%BA%90.jpg?raw=true" alt="부캐사진인데.." title="부캐">
+                        <img src="https://github.com/kopite97/test/blob/main/%EB%82%B4%EC%BA%90%EB%A6%AD.jpg?raw=true"
+                            alt="본캐사진인데.." title="본캐">
+                        <img src="https://github.com/kopite97/test/blob/main/%EB%B6%80%EC%BA%90.jpg?raw=true"
+                            alt="부캐사진인데.." title="부캐">
                     </li>
                     <li>
                         FootballManager
-                        <img src="https://github.com/kopite97/test/blob/main/fm23.png?raw=true" alt="fm23.." title="벨링엄은퇴시켰음"
+                        <p>FM23</p>
+                        <img src="https://github.com/kopite97/test/blob/main/fm23.png?raw=true" alt="fm23.."
+                            title="벨링엄 38살까지 쓰고 은퇴시켰음">
+                        <p>FM24</p>
+                        <img src="https://github.com/kopite97/test/blob/main/fmfmfm24.png?raw=true" alt="fm24.."
+                            title="여러팀 돌아가며 알차게 즐겼음">
                     </li>
                 </ul>
             </details>
