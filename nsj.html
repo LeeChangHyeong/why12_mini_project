@@ -87,9 +87,25 @@
             transform: translate(-20px,0);
         }
 
+        .progressWrap{
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+        }
     </style>
+    <script>
+
+        const onScroll = () =>{
+            console.log("scrolllll");
+        };
+        window.addEventListener('scroll',()=>onScroll());
+    </script>
 </head>
 <body>
+    <div class="progressWrap">
+        <progress value="" max="100">
+    </div>
     <aside class="side-bar">
         <nav>
             <ul>
@@ -105,11 +121,10 @@
             <h1>WHY 12?</h1>
             <div class="bgm">
                 <iframe src="https://drive.google.com/file/d/1krKJbFkqWcAgXwuVXFj2iI11kBqKoniI/preview" width="430"
-                    height="56" allow="autoplay" controlsList="nodownload"></iframe>
+                    height="56"></iframe>
             </div>
         </header>
-        <div class="introImage">
-            
+        <div class="introImage">           
             <img alt="Image"
                 src="https://github.com/kopite97/test/blob/main/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%82%AC%EC%9D%B4%EC%A6%88.jpg?raw=true" />
         </div>
