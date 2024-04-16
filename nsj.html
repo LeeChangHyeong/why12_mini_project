@@ -97,13 +97,12 @@
 
     </style>
     <script type="module">
-        export function onScrolls() {
+            function onScrolls() {
             console.log("Scrollllll");
+            
             const scrollTop = document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
             const scrollWidth = (scrollTop / height) * 100;
-
 
             $('#bar').attr("value", scrollWidth);
         }
@@ -112,7 +111,6 @@
         $('.summaryButton').click(function(){
             setTimeout(function(){onScrolls()},100);
         })
-
     </script>
 </head>
 
