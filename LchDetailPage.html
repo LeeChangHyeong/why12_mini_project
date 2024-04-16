@@ -22,12 +22,10 @@
         }
 
         .introduce {
-            /* background-color: black; */
             display: flex;
             flex-direction: column;
             padding-left: 80px;
             padding-top: 60px;
-            /* justify-content: center; */
         }
 
         .container {
@@ -39,17 +37,19 @@
 
         .bgm {
             display: flex;
+            justify-content: center; /* 가로 중앙 정렬 */
             align-items: center;
-            margin-left: auto; /* 오디오를 오른쪽으로 정렬 */
         }
 
         .bgm audio {
-            margin-left: 10px; /* 오디오와 텍스트 사이의 간격 조정 */
+            margin-left: auto;
         }
 
         .bgmName {
-            display: flex;
-            margin-left: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center; /* bgmName을 가운데 정렬 */
+            animation: bounce-animation 2s infinite; /* 반복해서 튀는 애니메이션 적용 */
         }
 
         .notice {
@@ -57,11 +57,34 @@
             text-align: right; /* 텍스트를 왼쪽 정렬 */
             padding-top: 10px;
             padding-right: 20px;
+            color: gray;
+            animation: blink-animation 1.5s infinite; /* 깜빡이는 애니메이션 적용 */
         }
 
         /* 배경색 */
         body {
             background-color: #f0f0f0;
+        }
+
+        @keyframes bounce-animation {
+            0%, 100% {
+                transform: translateY(10px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes blink-animation {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     </style>
     <title>Hello world!</title>
@@ -69,12 +92,12 @@
 
 <body>
     <div class="bgm">
-        <div class="bgmName">🎵 배경 음악: CHRISTIAN KURIA - DEEP GREEN</div>
         <!-- 크롬 정책으로 크롬 브라우저에선 자동 재생 안됌 -->
         <audio src="https://blog.kakaocdn.net/dn/GliDg/btsGGkJe1RY/75ztTRGb4o78OrAtMVy550/tfile.mp3" controls autoplay
             onloadstart="this.volume=0.3"></audio>
     </div>
-    <div class="notice">크롬 브라우저에선 자동 재생 지원이 안돼요</div>
+    <div class="notice">⚠️ 크롬 브라우저에선 자동 재생 지원이 안돼요 ⚠️</div>
+    <div class="bgmName">🎵 배경 음악: CHRISTIAN KURIA - DEEP GREEN 🎵</div>
     <main class="container">
         <img class="lchImage"
             src="https://github.com/LeeChangHyeong/why12_mini_project/assets/71262367/8f325800-456b-4865-a8e4-e3dbef161b57"
