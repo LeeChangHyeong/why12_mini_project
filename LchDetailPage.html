@@ -36,10 +36,18 @@
             padding-top: 60px;
         }
 
-        h2 {
+        firstDetail.h2 {
             letter-spacing: 2px;
             line-height: 2;
             /* 줄 간격 조절 */
+            padding-right: 50px;
+        }
+
+        secondDetail.h2 {
+            letter-spacing: 2px;
+            line-height: 2;
+            /* 줄 간격 조절 */
+            padding-lef: 50px;
         }
 
         .firstDetail {
@@ -47,11 +55,22 @@
             justify-content: center;
             /* 가로 중앙 정렬 */
             align-items: center;
-            background-color: beige;
+        }
+
+        .secondDetail {
+            display: flex;
+            justify-content: center;
+            /* 가로 중앙 정렬 */
+            align-items: center;
         }
 
         .firstDetail>* {
-            margin: 0 15px;
+            margin: 0 40px;
+            /* 좌우로만 15px의 여백을 설정합니다. */
+        }
+
+        .secondDetail>* {
+            margin: 0 40px;
             /* 좌우로만 15px의 여백을 설정합니다. */
         }
 
@@ -59,7 +78,24 @@
             width: 500px;
             height: auto;
             padding-top: 100px;
+            padding-right: 100px;
+            padding-left: 50px;
+        }
+
+        .soccerImage {
+            width: 800px;
+            height: auto;
+            padding-top: 100px;
             padding-left: 100px;
+            padding-right: 50px;
+        }
+
+        .surfImage {
+            width: auto;
+            height: 800px;
+            padding-top: 100px;
+            padding-right: 100px;
+            padding-left: 50px;
         }
 
         .container {
@@ -163,11 +199,29 @@
         <h2>안녕하세요!<br>
             iOS 개발을 하다 백앤드로 전향하고 싶어 스파르타 코딩 클럽을 수강하게 된 이창형입니다.<br>
             고향은 울산이지만 현재는 서울 까치산역 근처에 거주하고 있어요.<br>
-            어떤 주제의 이야기든지 언제든 좋아요! 편하게 말 걸어주세요.<br>
-            MBTI는 'ESTP'이고 취미는 축구, 헬스, 킥복싱, 서핑, 음악감상, 카페가기 등 활동적이고 나가서 노는 것을 좋아해요🔥<br>
-            강아지를 키우진 않지만 고양이보다 강아지를 많이 좋아합니다.🐕
+            어떤 주제의 이야기든지 언제든 좋습니다! 편하게 말 걸어주세요.<br>
+            MBTI는 'ESTP'고 취미는 축구, 헬스, 킥복싱, 서핑, 음악감상, 카페가기 등 활동적이고 나가서 노는 것을 좋아해요🔥<br>
+            강아지를 키우진 않지만 고양이보다 강아지를 많이 좋아합니다.🐕<br>
+            강아지 너무 귀여워요 ~~
         </h2>
+    </div>
 
+    <div class="secondDetail">
+        <h2>
+            저는 축구하는 것을 정말 좋아해요<br>
+            아직도 고향에 가면 동네 친구들과 모여 축구를 차요 ⚽️ 
+        </h2>
+        <image class="soccerImage"
+            src="https://github.com/LeeChangHyeong/why12_mini_project/assets/71262367/9c4f53d1-9804-42d2-9978-6143cbdb25a0">
+    </div>
+
+    <div class="firstDetail">
+        <image class="surfImage"
+            src="https://github.com/LeeChangHyeong/why12_mini_project/assets/71262367/7077447a-1260-49f8-9125-0874fcb240e9">
+            <h2>
+                저는 축구하는 것을 정말 좋아해요<br>
+                아직도 고향에 가면 동네 친구들과 모여 축구를 차요 ⚽️ 
+            </h2>
     </div>
 </body>
 
