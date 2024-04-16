@@ -55,20 +55,25 @@
             font-size: 30px;
             font-weight: bold;
         }
+
+        .pictures>details>summary{
+            font-size: 30px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <main class="container">
         <header>
-            <div class="headerText">
-                WHY 12?
-                
+            <h1>WHY 12?</h1>
+            <div class="bgm">
+                <audio src="https://blog.kakaocdn.net/dn/GliDg/btsGGkJe1RY/75ztTRGb4o78OrAtMVy550/tfile.mp3" controls></audio>
+            </div>
         </header>
         <div class="introImage">
             <img alt="Image"
-                src="https://github.com/kopite97/test/blob/main/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%82%AC%EC%9D%B4%EC%A6%88.jpg?raw=true" 
-               />
+                src="https://github.com/kopite97/test/blob/main/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%82%AC%EC%9D%B4%EC%A6%88.jpg?raw=true" />
         </div>
         <div class="introduction">
             <div class="information">
@@ -83,6 +88,16 @@
                 <h1>한마디</h1>
                 <p>열심히 하겠습니다</p>
             </div>
+        </div>
+        <hr>
+        <div class="selfIntro">
+            <h1>안녕하세요! 축구와 게임을 좋아하는 노석준이라고 합니다! </h1>
+            <p>Unity 클라이언트 개발자로 근무하다 백엔드에 대한 관심이 생겨 직무 전환을 위해 해당 트랙에 참여하게 되었습니다.<br>
+            고향은 경상북도 구미이고, 광주에서 대학생활을 하다 현재는 대전에 거주하고 있습니다.<br><br>
+            좋아하는 축구팀은 리버풀 입니다. 2009년부터 응원해 왔으며, 거의 매 경기 챙겨보고 있습니다.<br>
+            다양한 장르의 게임을 좋아합니다. 그 중 로스트아크를 주로 하며, RPG말고도 FootballManager나 문명6같은 시뮬레이션 게임을 주로 합니다.
+            예전에는 FPS게임도 굉장히 좋아했습니다.<br>
+            </p>
         </div>
         <hr>
         <div class="grid" id="gridPart">
@@ -109,38 +124,54 @@
             </div>
         </div>
         <hr>
-        <h1>Pictures</h1>
-        <details>
-            <summary>나를 미치게 하는 것들</summary>
-            <p>(진짜 사람 미치게 만듦)</p>
-            <p>빅찬 스미스씨들</p>
-            <ul>
-                <li>
-                    <p>신누형</p>
-                    <img src="https://i.namu.wiki/i/J6nUYwynXL-ZNFMDYIrcYcEHXCgkee712G-cq3kiHEEu9_kts1xOXoXclFI-LR_lv0KPJRZdsMr1hW-Tx3zR_VzYGnz1kbkn-sX8Ih0glQietWG72SDld1usPyRA5n_c5Bl11f1cPp5crdIIGOXVyA.webp">           
-                    <video width="300px" height="500px" src="https://media5jvqbd.fmkorea.com/files/attach/new3/20231127/33854530/4719337680/6445438574/2e3edc3d0dcb1640734a9c58ef9838ab.mp4" controls></video>
-                </li>
-                <li>
-                    <p>학포</p>
-                    <img src="https://i.namu.wiki/i/gJKe-IOxqwj6HvSS_Ivw2MBHQ5lp0jZ7QhXAE7FZr4sBMsMnduSP1GMhobzLmsN1pFTx5lFgKXTpzjAXrGbCjenAAkRBjvoWUoQwKytWip3axz9O_4p0J1bItZA9t_0G1T_j-iSwNX89wV1z7TU2Vw.webp">
-                    <img src="https://image.fmkorea.com/files/attach/new3/20240226/33854530/3043797869/6761043158/0c37e3d6d41448506010455489cbf507.png">
-                </li>
-            </ul>
+        <h1>Pictures (▼클릭)</h1>
+        <div class="pictures">
             <details>
-                <summary>--> 최고의 순간</summary>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LRdIgwiPH0g?si=6XL8fOKitV4dVW6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <summary>나를 미치게 하는 것들</summary>
+                <p>(진짜 사람 미치게 만듦)</p>
+                <p>빅찬 스미스씨들</p>
+                <ul>
+                    <li>
+                        <p>신누형 (이적료 약 1010억)</p>
+                        <img
+                            src="https://i.namu.wiki/i/J6nUYwynXL-ZNFMDYIrcYcEHXCgkee712G-cq3kiHEEu9_kts1xOXoXclFI-LR_lv0KPJRZdsMr1hW-Tx3zR_VzYGnz1kbkn-sX8Ih0glQietWG72SDld1usPyRA5n_c5Bl11f1cPp5crdIIGOXVyA.webp">
+                        <video width="300px" height="500px"
+                            src="https://media5jvqbd.fmkorea.com/files/attach/new3/20231127/33854530/4719337680/6445438574/2e3edc3d0dcb1640734a9c58ef9838ab.mp4"
+                            controls></video>
+                    </li>
+                    <li>
+                        <p>학포 (이적료 약 650억)</p>
+                        <img
+                            src="https://i.namu.wiki/i/gJKe-IOxqwj6HvSS_Ivw2MBHQ5lp0jZ7QhXAE7FZr4sBMsMnduSP1GMhobzLmsN1pFTx5lFgKXTpzjAXrGbCjenAAkRBjvoWUoQwKytWip3axz9O_4p0J1bItZA9t_0G1T_j-iSwNX89wV1z7TU2Vw.webp">
+                        <img
+                            src="https://image.fmkorea.com/files/attach/new3/20240226/33854530/3043797869/6761043158/0c37e3d6d41448506010455489cbf507.png">
+                    </li>
+                </ul>
+                <details>
+                    <summary>--> 최고의 순간</summary>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LRdIgwiPH0g?si=6XL8fOKitV4dVW6k"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </details>
             </details>
-        </details>
-        <details>
-            <summary>LostArk</summary>
-            <ul>
-                <li>
-                    <p>내 로스트아크 캐릭터 (본캐)</p>
-                    <img src="https://github.com/kopite97/test/blob/main/%EB%82%B4%EC%BA%90%EB%A6%AD.jpg?raw=true">
-                </li>
-                <li>...</li>
-            </ul>
-        </details>
+            <details>
+                <summary>좋아하는 게임</summary>
+                <ul>
+                    <li>
+                        LostArk
+                        <p>내 캐릭터</p>
+                        <img src="https://github.com/kopite97/test/blob/main/%EB%82%B4%EC%BA%90%EB%A6%AD.jpg?raw=true" alt="본캐사진인데.." title="본캐">
+                        <img src="https://github.com/kopite97/test/blob/main/%EB%B6%80%EC%BA%90.jpg?raw=true" alt="부캐사진인데.." title="부캐">
+                    </li>
+                    <li>
+                        FootballManager
+                        <img src="https://github.com/kopite97/test/blob/main/fm23.png?raw=true" alt="fm23.." title="벨링엄은퇴시켰음">
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <hr>
     </main>
 </body>
 
