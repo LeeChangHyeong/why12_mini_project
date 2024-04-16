@@ -63,8 +63,8 @@
             font-weight: bold;
         }
 
-        :root{
-            --side-bar-width : 110px;
+        :root {
+            --side-bar-width: 110px;
             --side-bar-height: 180px;
         }
 
@@ -74,37 +74,47 @@
             width: var(--side-bar-width);
             height: var(--side-bar-height);
             margin-top: calc((100vh - var(--side-bar-height)) / 2);
-            margin-left : calc((100vw - var(--side-bar-width)));
+            margin-left: calc((100vw - var(--side-bar-width)));
             padding-left: 5px;
             border-radius: 15px;
         }
 
-        .side-bar{
-            transform: translate(calc(var(--side-bar-width)*0.6),0);
+        .side-bar {
+            transform: translate(calc(var(--side-bar-width)*0.6), 0);
             transition: .5s;
         }
-        .side-bar:hover{
-            transform: translate(-20px,0);
+
+        .side-bar:hover {
+            transform: translate(-20px, 0);
         }
 
-        .progressWrap{
+        .progressWrap {
             position: fixed;
-            top:0;
-            left:0;
-            right:0;
+            top: 0;
+            left: 0;
+            right: 0;
         }
     </style>
     <script>
 
-        const onScroll = () =>{
-            console.log("scrolllll");
+        const onScroll = () => {
+            const barValue = $('#bar').val();
+
+            const scrollTop = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            const scrollWidth = (scrollTop / height) * 100;
+            console.log(scrollWidth);
+            barValue.val = scrollWidth;
+
         };
-        window.addEventListener('scroll',()=>onScroll());
+        window.addEventListener('scroll', () => onScroll());
     </script>
 </head>
+
 <body>
     <div class="progressWrap">
-        <progress value="" max="100">
+        <progress id="bar" value="50" max="100">
     </div>
     <aside class="side-bar">
         <nav>
@@ -120,12 +130,12 @@
             <a name="information"></a>
             <h1>WHY 12?</h1>
             <div class="bgm">
-                <iframe src="https://drive.google.com/file/d/1krKJbFkqWcAgXwuVXFj2iI11kBqKoniI/preview" width="430"
-                    height="56" allow="autoplay" controlsList="nodownload"></iframe>
+                <audio src="https://blog.kakaocdn.net/dn/GliDg/btsGGkJe1RY/75ztTRGb4o78OrAtMVy550/tfile.mp3" controls autoplay
+                onloadstart="this.volume=0.3"></audio>
             </div>
         </header>
         <div class="introImage">
-            
+
             <img alt="Image"
                 src="https://github.com/kopite97/test/blob/main/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%82%AC%EC%9D%B4%EC%A6%88.jpg?raw=true" />
         </div>
