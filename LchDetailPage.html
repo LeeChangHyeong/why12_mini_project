@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/pico.min.css">
+
+    <style>
+        /*폰트*/
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        * {
+            font-family: "Gowun Dodum", sans-serif;
+        }
+
+        .lchImage {
+            width: 300px;
+            height: auto;
+            padding-top: 30px;
+        }
+
+        .introduce {
+            /* background-color: black; */
+            display: flex;
+            flex-direction: column;
+            padding-left: 80px;
+            padding-top: 60px;
+            /* justify-content: center; */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bgm {
+            display: flex;
+            align-items: center;
+            margin-left: auto; /* 오디오를 오른쪽으로 정렬 */
+        }
+
+        .bgm audio {
+            margin-left: 10px; /* 오디오와 텍스트 사이의 간격 조정 */
+        }
+
+        .bgmName {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .notice {
+            margin-left: auto; /* notice를 오른쪽으로 이동 */
+            text-align: right; /* 텍스트를 왼쪽 정렬 */
+            padding-top: 10px;
+            padding-right: 20px;
+        }
+
+        /* 배경색 */
+        body {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <title>Hello world!</title>
+</head>
+
+<body>
+    <div class="bgm">
+        <div class="bgmName">🎵 배경 음악: CHRISTIAN KURIA - DEEP GREEN</div>
+        <!-- 크롬 정책으로 크롬 브라우저에선 자동 재생 안됌 -->
+        <audio src="https://blog.kakaocdn.net/dn/GliDg/btsGGkJe1RY/75ztTRGb4o78OrAtMVy550/tfile.mp3" controls autoplay
+            onloadstart="this.volume=0.3"></audio>
+    </div>
+    <div class="notice">크롬 브라우저에선 자동 재생 지원이 안돼요</div>
+    <main class="container">
+        <img class="lchImage"
+            src="https://github.com/LeeChangHyeong/why12_mini_project/assets/71262367/8f325800-456b-4865-a8e4-e3dbef161b57"
+            alt="이미지">
+        <div class="introduce">
+            <h1>🙋🏻‍♂️이름: 이창형</h1>
+            <h1>🎂생년월일: 980217</h1>
+            <h1>🗣️한마디: 친해지고 싶어요</h1>
+        </div>
+    </main>
+</body>
+
+</html>
