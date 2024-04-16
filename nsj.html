@@ -94,27 +94,31 @@
             left: 0;
             right: 0;
         }
+
     </style>
-    <script>
-
-        const onScroll = () => {
-            const barValue = $('#bar').val();
-
+    <script type="module">
+        export function onScrolls() {
+            console.log("Scrollllll");
             const scrollTop = document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
             const scrollWidth = (scrollTop / height) * 100;
-            console.log(scrollWidth);
-            barValue.val = scrollWidth;
 
-        };
-        window.addEventListener('scroll', () => onScroll());
+
+            $('#bar').attr("value", scrollWidth);
+        }
+        window.addEventListener('scroll', () => onScrolls());
+   
+        $('.summaryButton').click(function(){
+            setTimeout(function(){onScrolls()},100);
+        })
+
     </script>
 </head>
 
 <body>
     <div class="progressWrap">
-        <progress id="bar" value="50" max="100">
+        <progress id="bar" value="0" max="100">
     </div>
     <aside class="side-bar">
         <nav>
@@ -130,8 +134,8 @@
             <a name="information"></a>
             <h1>WHY 12?</h1>
             <div class="bgm">
-                <audio src="https://blog.kakaocdn.net/dn/GliDg/btsGGkJe1RY/75ztTRGb4o78OrAtMVy550/tfile.mp3" controls autoplay
-                onloadstart="this.volume=0.05"></audio>
+                <audio src="https://blog.kakaocdn.net/dn/GliDg/btsGGkJe1RY/75ztTRGb4o78OrAtMVy550/tfile.mp3" controls
+                    autoplay onloadstart="this.volume=0.05"></audio>
             </div>
         </header>
         <div class="introImage">
@@ -196,7 +200,7 @@
         <a name="etc"></a>
         <div class="pictures">
             <details>
-                <summary>나를 미치게 하는 것들</summary>
+                <summary class="summaryButton">나를 미치게 하는 것들</summary>
                 <p>(진짜 사람 미치게 만듦)</p>
                 <p>빅찬 스미스씨들</p>
                 <ul>
@@ -217,7 +221,7 @@
                     </li>
                 </ul>
                 <details>
-                    <summary>--> 최고의 순간</summary>
+                    <summary class="summaryButton">--> 최고의 순간</summary>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/LRdIgwiPH0g?si=6XL8fOKitV4dVW6k"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -225,7 +229,7 @@
                 </details>
             </details>
             <details>
-                <summary>좋아하는 게임</summary>
+                <summary class="summaryButton">좋아하는 게임</summary>
                 <ul>
                     <li>
                         LostArk
@@ -250,5 +254,4 @@
         <hr>
     </main>
 </body>
-
 </html>
