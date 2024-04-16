@@ -28,6 +28,25 @@
             padding-top: 60px;
         }
 
+        .firstDetail {
+            display: flex;
+            justify-content: center;
+            /* 가로 중앙 정렬 */
+            align-items: center;
+        }
+
+        .firstDetail>* {
+            margin: 0 15px;
+            /* 좌우로만 15px의 여백을 설정합니다. */
+        }
+
+        .dogImage {
+            width: 500px;
+            height: auto;
+            padding-top: 100px;
+            padding-left: 100px;
+        }
+
         .container {
             display: flex;
             flex-direction: row;
@@ -37,7 +56,8 @@
 
         .bgm {
             display: flex;
-            justify-content: center; /* 가로 중앙 정렬 */
+            justify-content: center;
+            /* 가로 중앙 정렬 */
             align-items: center;
         }
 
@@ -48,18 +68,23 @@
         .bgmName {
             padding-top: 50px;
             padding-bottom: 50px;
-            text-align: center; /* bgmName을 가운데 정렬 */
-            animation: bounce-animation 2s infinite; /* 반복해서 튀는 애니메이션 적용 */
+            text-align: center;
+            /* bgmName을 가운데 정렬 */
+            animation: bounce-animation 2s infinite;
+            /* 반복해서 튀는 애니메이션 적용 */
             color: #655CD6;
         }
 
         .notice {
-            margin-left: auto; /* notice를 오른쪽으로 이동 */
-            text-align: right; /* 텍스트를 왼쪽 정렬 */
+            margin-left: auto;
+            /* notice를 오른쪽으로 이동 */
+            text-align: right;
+            /* 텍스트를 왼쪽 정렬 */
             padding-top: 10px;
             padding-right: 20px;
             color: gray;
-            animation: blink-animation 1.5s infinite; /* 깜빡이는 애니메이션 적용 */
+            animation: blink-animation 1.5s infinite;
+            /* 깜빡이는 애니메이션 적용 */
         }
 
         /* 배경색 */
@@ -68,9 +93,12 @@
         }
 
         @keyframes bounce-animation {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(10px);
             }
+
             50% {
                 transform: translateY(-10px);
             }
@@ -80,9 +108,11 @@
             0% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
@@ -108,7 +138,15 @@
             <h1>🎂생년월일: 980217</h1>
             <h1>🗣️한마디: 친해지고 싶어요</h1>
         </div>
+
     </main>
+    <div class="firstDetail">
+        <img class="dogImage"
+            src="https://github.com/LeeChangHyeong/why12_mini_project/assets/71262367/2a0e62bd-f6ee-40dc-a3a6-2dcf28955053"
+            alt="이미지">
+        <h2>안녕하세요! iOS 개발을 하다 백앤드로 전향하고 싶어 스파르타 코딩클럽을 수강하게 된 이창형입니다.</h2>
+
+    </div>
 </body>
 
 </html>
