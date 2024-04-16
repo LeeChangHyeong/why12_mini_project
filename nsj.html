@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <style>
+        * {
+            font-family: "Nanum Pen Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: "Nanum Pen Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .introImage {
+            display: inline-block;
+
+        }
+
+        .introduction {
+            margin-left: 50px;
+            font-size: 20px;
+            display: inline-block;
+            vertical-align: top;
+            width: 500px;
+        }
+
+        .information>h1 {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .information>p {
+            display: inline-block;
+            font-size: 25px;
+            margin-left: 5px;
+        }
+
+        .grid {
+            margin-top: 50px;
+        }
+
+        .gridHeader {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="headerText">
+            WHY 12?
+        </div>
+    </header>
+    <main class="container">
+        <div class="introImage">
+            <img alt="Image"
+                src="https://github.com/kopite97/test/blob/main/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%82%AC%EC%9D%B4%EC%A6%88.jpg?raw=true" />
+        </div>
+        <div class="introduction">
+            <div class="information">
+                <h1>이름</h1>
+                <p>노석준</p>
+            </div>
+            <div class="information">
+                <h1>생년월일</h1>
+                <p>1997년 9월 12일</p>
+            </div>
+            <div class="information">
+                <h1>한마디</h1>
+                <p>열심히 하겠습니다</p>
+            </div>
+        </div>
+        <hr>
+        <div class="grid" id="gridPart">
+            <div>
+                <article>
+                    <header class="gridHeader">경력</header>
+                    소프트웨어학부 전공, Unity 클라이언트 개발자 근무
+                    <footer>TMI>></footer>
+                </article>
+            </div>
+            <div>
+                <article>
+                    <header class="gridHeader">취미</header>
+                    게임, 축구경기관람(직관은 안감), 음악감상
+                    <footer>TMI>>2009년부터 리버풀 서포터입니다.. 다양한 장르의 게임을 좋아합니다.</footer>
+                </article>
+            </div>
+            <div>
+                <article>
+                    <header class="gridHeader">목표</header>
+                    다양한 기술 스택을 쌓는것이 목표입니다.
+                    <footer>TMI>>풀스택 개발자가 되고 싶습니다!!</footer>
+                </article>
+            </div>
+        </div>
+        <hr>
+        <h1>Pictures</h1>
+        <details>
+            <summary>나를 미치게 하는 것들</summary>
+            <p>(진짜 사람 미치게 만듦)</p>
+            <ul>
+                <li>
+                    <p>신누형</p>
+                    <img src="https://i.namu.wiki/i/J6nUYwynXL-ZNFMDYIrcYcEHXCgkee712G-cq3kiHEEu9_kts1xOXoXclFI-LR_lv0KPJRZdsMr1hW-Tx3zR_VzYGnz1kbkn-sX8Ih0glQietWG72SDld1usPyRA5n_c5Bl11f1cPp5crdIIGOXVyA.webp">           
+                </li>
+                <li>
+                    <p>학포</p>
+                    <img src="https://i.namu.wiki/i/gJKe-IOxqwj6HvSS_Ivw2MBHQ5lp0jZ7QhXAE7FZr4sBMsMnduSP1GMhobzLmsN1pFTx5lFgKXTpzjAXrGbCjenAAkRBjvoWUoQwKytWip3axz9O_4p0J1bItZA9t_0G1T_j-iSwNX89wV1z7TU2Vw.webp">
+                </li>
+            </ul>
+        </details>
+        <details>
+            <summary>LostArk</summary>
+            <ul>
+                <li>
+                    <p>내 로스트아크 캐릭터 (본캐)</p>
+                    <img src="https://github.com/kopite97/test/blob/main/%EB%82%B4%EC%BA%90%EB%A6%AD.jpg?raw=true">
+                </li>
+                <li>...</li>
+            </ul>
+        </details>
+    </main>
+</body>
+
+</html>
