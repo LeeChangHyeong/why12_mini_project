@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="light dark" name="color-scheme"/>
+    <link
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+            rel="stylesheet"
+    />
+    <title>안녕하세요 남상혁입니다.</title>
+    <style>
+        .main-section {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nsh-image-container {
+            max-width: 30%;
+        }
+
+        .nsh-image-container > img {
+            width: 100%;
+            max-width: 160px;
+        }
+
+        .modal-button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="container">
+<header>
+    <nav>
+        <ul>
+            <li><a href="/"><strong>팀 소개 페이지</strong></a></li>
+        </ul>
+        <ul>
+            <li><a href="#">이창형</a></li>
+            <li><a href="#">노석준</a></li>
+            <li><a href="#">류승범</a></li>
+            <li><a class="contrast" href="#">남상혁</a></li>
+            <li><a href="#">김경태</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h1>안녕하세요 남상혁입니다.</h1>
+    </section>
+    <section class="main-section">
+        <div class="nsh-image-container">
+            <img src="public/nsh/nsh.jpeg"/>
+        </div>
+        <div>
+            <hgroup>
+                <h3>이름</h3>
+                <p>남상혁</p>
+            </hgroup>
+            <hgroup>
+                <h3>생년월일</h3>
+                <p>94.08.04</p>
+            </hgroup>
+            <hgroup>
+                <h3>한마디</h3>
+                <p>잘 부탁드립니다.</p>
+            </hgroup>
+        </div>
+    </section>
+    <section>
+        <p>
+            안녕하세요 남상혁입니다. 약 2년의 프론트엔드 개발자 경험이 있습니다. 백엔드 개발자로의 직무전환을 위해 내배캠에 합류했습니다.
+            잘 부탁드립니다.
+        </p>
+        <p>
+            현재 경기도 안양에 거주하고 있습니다.
+        </p>
+        <p>
+            여가시간에는 유튜브와 드라마 시청을 합니다. 그리고 강아지와 산책하는걸 좋아합니다.
+        </p>
+        <p>
+            프론트엔드 개발에 관심있거나 궁금한게 있으신 분은 슬랙주세요.
+        </p>
+    </section>
+    <section>
+        <div class="grid">
+            <article class="modal-button" data-target="modal-1" onclick="toggleModal(event)">
+                <header>말구</header>
+                <img src="public/nsh/malgoo.png">
+                <dialog id="modal-1">
+                    <article>
+                        <header>
+                                말구
+                        </header>
+                        <img src="public/nsh/malgoo.png">
+                    </article>
+                </dialog>
+            </article>
+            <article class="modal-button" data-target="modal-2" onclick="toggleModal(event)">
+                <header>벚꽃</header>
+                <img src="public/nsh/sakura.JPG">
+                <dialog id="modal-2">
+                    <article>
+                        <header>벚꽃</header>
+                        <img src="public/nsh/sakura.JPG">
+                    </article>
+                </dialog>
+            </article>
+            <article class="modal-button" data-target="modal-3" onclick="toggleModal(event)">
+                <header>산책코스</header>
+                <img src="public/nsh/course.png">
+                <dialog id="modal-3">
+                    <article>
+                        <header>산책코스</header>
+                        <img src="public/nsh/course.png">
+                    </article>
+                </dialog>
+            </article>
+        </div>
+    </section>
+
+</main>
+<script type="application/javascript">
+    // Config
+    const isOpenClass = "modal-is-open";
+    const openingClass = "modal-is-opening";
+    const closingClass = "modal-is-closing";
+    const scrollbarWidthCssVar = "--pico-scrollbar-width";
+    const animationDuration = 400; // ms
+    let visibleModal = null;
+
+    // Toggle modal
+    const toggleModal = (event) => {
+        event.preventDefault();
+        const modal = document.getElementById(event.currentTarget.dataset.target);
+        if (!modal) return;
+        modal && (modal.open ? closeModal(modal) : openModal(modal));
+    };
+
+    // Open modal
+    const openModal = (modal) => {
+        const {documentElement: html} = document;
+        const scrollbarWidth = getScrollbarWidth();
+        if (scrollbarWidth) {
+            html.style.setProperty(scrollbarWidthCssVar, `${scrollbarWidth}px`);
+        }
+        html.classList.add(isOpenClass, openingClass);
+        setTimeout(() => {
+            visibleModal = modal;
+            html.classList.remove(openingClass);
+        }, animationDuration);
+        modal.showModal();
+    };
+
+    // Close modal
+    const closeModal = (modal) => {
+        visibleModal = null;
+        const {documentElement: html} = document;
+        html.classList.add(closingClass);
+        setTimeout(() => {
+            html.classList.remove(closingClass, isOpenClass);
+            html.style.removeProperty(scrollbarWidthCssVar);
+            modal.close();
+        }, animationDuration);
+    };
+
+    // Close with a click outside
+    document.addEventListener("click", (event) => {
+        if (visibleModal === null) return;
+        const modalContent = visibleModal.querySelector("article");
+        const isClickInside = modalContent.contains(event.target);
+        !isClickInside && closeModal(visibleModal);
+    });
+
+    // Close with Esc key
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && visibleModal) {
+            closeModal(visibleModal);
+        }
+    });
+
+    // Get scrollbar width
+    const getScrollbarWidth = () => {
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        return scrollbarWidth;
+    };
+
+    // Is scrollbar visible
+    const isScrollbarVisible = () => {
+        return document.body.scrollHeight > screen.height;
+    };
+</script>
+</body>
+</html>
